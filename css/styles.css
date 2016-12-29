@@ -1,6 +1,5 @@
 .navbar-right {
   height: 50px;
-  margin-right: 40px;
 }
 .navbar-right li{
   width: 40px;
@@ -13,4 +12,29 @@
  border-radius: 50%;
  vertical-align: middle;
  background-color: white;
+}
+#navigation {
+  border-bottom: 15px solid lightgrey;
+  margin-bottom: 40px;
+}
+
+#message {
+  font-size: 18px;
+}
+
+.skill-list {
+  font-size: 20px;
+
+}
+
+.skill-list i{
+  font-size: 46px;
+   vertical-align: middle;
+}
+
+.skill-list li {
+  list-style: none;
+  margin: 10px 0;
+   vertical-align: middle;
+  line-height: 60px;
 }
