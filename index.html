@@ -35,9 +35,9 @@
   <nav id="navigation" class="nav navbar navbar-inverse navbar-fixed-top">
       <div class="container">
           <ul class="nav navbar-nav">
-              <li role="presentation"><a href="#">About me</a></li>
-              <li role="presentation"><a href="#">Showcase</a></li>
-              <li role="presentation"><a href="#">My Journey</a></li>
+              <li role="presentation"><a href="#about-me">About me</a></li>
+              <li role="presentation"><a href="#showcase">Showcase</a></li>
+              <li role="presentation"><a href="#resources">Resources</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li><img src="https://davidwalsh.name/demo/codepenLogo.png?preview" height="30px" width="30px" alt="codepen" />
@@ -84,64 +84,101 @@
       </div>
   </div>
 
-      <hr />
+    <hr />
 
-   <div id="showcase" class="container">
-          <h2>SKILLS</h2>
+   <div id="skills" class="container">
+          <h2>Technical Skills</h2>
 
-          <div class="row">
-               <div class="col-md-4">
-                 <ul class="skill-list">
-                   <li><i class="devicon-html5-plain colored"></i>  HTML5</li>
-                   <li><i class="devicon-css3-plain colored"></i>  CSS3</li>
-                   <li><i class="devicon-bootstrap-plain colored"></i>  BootStrap</li>
-                   <li><i class="devicon-jquery-plain colored"></i>  jQuery</li>
-                 </ul>
-               </div>
-               <div class="col-md-4">
-                 <ul class="skill-list">
-                   <li><i class="devicon-javascript-plain colored"></i>  JavaScript</li>
-                   <li><i class="devicon-angularjs-plain colored"></i>  AngularJS</li>
-                   <li><i class="devicon-mongodb-plain colored"></i>  mongodb</li>
-                   <li><i class="devicon-nodejs-plain colored"></i>  nodeJs</li>
-                 </ul>
-                </div>
-               <div class="col-md-4">
-                 <ul class="skill-list">
-                   <li><i class="devicon-github-plain colored"></i>  Git/Github</li>
-                   <li><i class="devicon-postgresql-plain colored"></i>  postgresql</li>
-                   <li><i class="devicon-rails-plain colored"></i>  Rails</li>
-                   <li><i class="devicon-ruby-plain colored"></i>  Ruby</li>
-                 </ul>
-               </div>
-
+     <div class="row">
+       <div class="col-md-4">
+         <ul class="skill-list">
+           <li><i class="devicon-html5-plain colored"></i>  HTML5</li>
+           <li><i class="devicon-css3-plain colored"></i>  CSS3</li>
+           <li><i class="devicon-bootstrap-plain colored"></i>  BootStrap</li>
+           <li><i class="devicon-jquery-plain colored"></i>  jQuery</li>
+         </ul>
+       </div>
+       <div class="col-md-4">
+         <ul class="skill-list">
+           <li><i class="devicon-javascript-plain colored"></i>  JavaScript</li>
+           <li><i class="devicon-angularjs-plain colored"></i>  AngularJS</li>
+           <li><i class="devicon-mongodb-plain colored"></i>  mongodb</li>
+           <li><i class="devicon-nodejs-plain colored"></i>  nodeJs</li>
+         </ul>
+        </div>
+       <div class="col-md-4">
+         <ul class="skill-list">
+           <li><i class="devicon-github-plain colored"></i>  Git/Github</li>
+           <li><i class="devicon-postgresql-plain colored"></i>  postgresql</li>
+           <li><i class="devicon-rails-plain colored"></i>  Rails</li>
+           <li><i class="devicon-ruby-plain colored"></i>  Ruby</li>
+         </ul>
+       </div>
      </div>
 
 
 
-     <ul id="skill-list">
 
-
-
-
-
-     </ul>
          </div>
+
+    <hr />
 
     <div id="showcase" class="container">
           <h2>Showcase</h2>
         <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <img height="400px" width="300px" src="https://startacus.net/uploads/image/Eventbrite-Logo.png" alt="eventbrite" />
+                <img height="400px" width="300px" src="https://cdn.evbuc.com/eventlogos/128173301/meetuplogo.png" alt="meetup" />
+              </div>
+            </div>
           <div class="col-md-6">
-          <div class="thumbnail"><img src="" alt="" /></div>
-            <p class="caption">Conduit</p>
-          </div>
-          <div class="col-md-6">
-          <div class="thumbnail"><img src="" alt="" /></div>
-            <p class="caption">Quotable Expression</p>
-          </div>
-        </div>
-      </div>
+             <h2>Conduit - Your event hub</h2>
+             <p>This project leveraged the use of API's. The overall idea is to give users a place to shop for things to do and to save them and share them with friends. Currently, the site only taps in meetup.com; however,  there are plans to expand and include more API's. </p>
 
+            <h4>Technologies used</h4>
+            <ul>
+              <li>Language: JavaScript with Node.js</li>
+              <li>NPM packages: body-parser, connect-flash, cookie-parser, dotenv, ejs,  express-ejs-layouts, express-session</li>
+              <li>Middleware: morgan, express,</li>
+              <li>Security: passport, passport-local, bcrypt-nodejs</li>
+              <li>Database: mongoose, mongodb hosted on heroku</li>
+              <li>Styling: HTML, CSS(Saas, Less), Bootsrap,</li>
+              <li>Site Hosting: Heroku</li>
+            </ul>
+          </div>
+          </div>
+
+        <div class="col-md-12">
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <img height="400px" width="300px" src="https://startacus.net/uploads/image/Eventbrite-Logo.png" alt="" />
+                <img height="400px" width="300px" src="https://cdn.evbuc.com/eventlogos/128173301/meetuplogo.png" alt="" />
+              </div>
+            </div>
+          <div class="col-md-6">
+             <h2>Expression! - Inspiring Quotes (inprogress)</h2>
+             <p>This project leveraged the use of API's. The overall idea is to give users a place to shop for things to do and to save them and share them with friends. Currently, the site only taps in meetup.com; however,  there are plans to expand and include more API's. </p>
+
+            <h4>Technologies used</h4>
+            <ul>
+              <li>Language: JavaScript with Node.js</li>
+              <li>NPM packages: body-parser, dotenv</li>
+              <li>Middleware: morgan, express, </li>
+              <li>Security: passport, passport-local, bcrypt-nodejs,jsonwebtoken</li>
+              <li>Database: mongoose, mongodb hosted on heroku</li>
+              <li>Styling: HTML, CSS(Saas, Less), Bootsrap,</li>
+              <li>Site Hosting: Heroku</li>
+            </ul>
+          </div>
+          </div>
+
+
+      </div>
+  </div>
+
+    <hr />
       <div id="resources" class="container-fluid">
           <h2>Resources</h2>
           <ul>
@@ -160,7 +197,6 @@
               <br /><cite> - Antoine de Saint-Exup&#233;ry (Terre des Hommes, 1939)</cite>
           </div>
       </div>
-
 
 <script src="js/profile.js"></script>
 </body>
