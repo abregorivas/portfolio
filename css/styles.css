@@ -43,13 +43,23 @@
   background-color: #333;
   color: white;
   padding: 20px;
+  margin-top: 40px;
 }
 
 #showcase .thumbnail img{
   min-height: 500px;
-  min-width: 400px;
+  height: 400px;
+  max-height: 600px;
+  min-width: 100px;
+  max-width: 100%
 }
 
 .caption {
   text-align: center;
+}
+
+.showcase-description {
+  font-size: 18px;
+  padding: 0 10px;
+  line-height: 30px;
 }
