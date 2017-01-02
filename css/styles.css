@@ -1,3 +1,4 @@
+
 .navbar-right {
   height: 50px;
 }
@@ -46,6 +47,11 @@
   margin-top: 40px;
 }
 
+#showcase h2 {
+  text-align: center;
+  font-size: 35px;
+
+}
 #showcase .thumbnail img{
   min-height: 500px;
   height: 400px;
@@ -62,4 +68,32 @@
   font-size: 18px;
   padding: 0 10px;
   line-height: 30px;
+  text-align: center;
+}
+
+#simplicity {
+  margin: 20px auto;
+  background: url('https://brand-quarterly-veseycreative.netdna-ssl.com/wp-content/uploads/2016/02/The-Age-Of-Digital-Globalization-Is-The-Age-Of-Simplicity-Q1.jpg');
+    background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jumbotron {
+  background-color: rgba(100, 100, 150, 0.1);
+  min-height: 600px;
+  min-width: 100%;
+  padding: 20px;
+/*   margin: 20px; */
+  color: black:
+}
+
+
+footer {
+  margin: 0 auto;
+  background-color: #333;
+  color: white;
+}
+
+footer ul li{
+  list-style: none;
 }
