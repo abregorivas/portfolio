@@ -10,6 +10,14 @@ body {
   background-color: #22313F;
 }
 
+.bg-green{
+  background-color: #96281B;
+}
+
+.bg-grey{
+  background-color: #444444;
+}
+
 .container {
     padding: 40px 20px;
 }
@@ -44,4 +52,14 @@ h3 {
 }
 #services  {
   text-align: center;
+  color: white;
+}
+
+.thumbnail {
+  /*border: none !important;*/
+}
+
+.portfolio-item {
+  min-height: 300px;
+  width: 300px;
 }
