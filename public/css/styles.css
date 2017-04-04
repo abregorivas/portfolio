@@ -2,6 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/*helper styles*/
 .bg-yellow {
   background-color: #F9BF3B;
 }
@@ -20,11 +21,21 @@ body {
 
 .container {
     padding: 40px 20px;
+    /*margin: 0 auto;*/
 }
+.container-spacer {
+  padding: 80px 20px;
+}
+
+/*navigation*/
 
 .top-bar {
     background-color: #22313F;
     color: white;
+}
+
+.title-bar, .top-bar, .top-bar ul {
+  background-color: #22313F;
 }
 
 .top-bar-title{
@@ -47,6 +58,8 @@ h3 {
   text-align: center;
 }
 
+/*about section*/
+
 #about-me {
   margin-bottom: 40px;
 }
@@ -59,7 +72,16 @@ h3 {
   /*border: none !important;*/
 }
 
-.portfolio-item {
-  min-height: 300px;
-  width: 300px;
+.card {
+    line-height: 400px;
+    min-height: 400px;
+    /*width: 400px;*/
+    border: none;
+    vertical-align: center;
 }
+
+.portfolio-item {
+  min-height: 400px;
+  width: 400px;
+}
+
