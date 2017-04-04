@@ -67,18 +67,15 @@ h3 {
   text-align: center;
   color: white;
 }
-
-.thumbnail {
-  /*border: none !important;*/
+#portfolio {
+  text-align: center;
 }
 
-.card {
-    line-height: 400px;
-    min-height: 400px;
-    /*width: 400px;*/
-    border: none;
-    vertical-align: center;
-}
+/*.card {
+    line-height: 500px;
+    min-height: 500px;
+    border: 1px solid red;
+}*/
 
 .portfolio-item {
   min-height: 400px;
