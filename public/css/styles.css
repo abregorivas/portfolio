@@ -1,1 +1,47 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
+.bg-yellow {
+  background-color: #F9BF3B;
+}
+
+.bg-blue {
+  background-color: #22313F;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+.top-bar {
+    background-color: #22313F;
+    color: white;
+}
+
+.top-bar-title{
+  min-width: 100%;
+  float: none;
+  text-align: center;
+}
+
+#nav-section h4{
+  color: white;
+  text-transform: uppercase;
+}
+
+.top-bar-right ul li a{
+color: white;
+}
+
+
+h3 {
+  text-align: center;
+}
+
+#about-me {
+  margin-bottom: 40px;
+}
+#services  {
+  text-align: center;
+}
