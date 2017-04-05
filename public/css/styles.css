@@ -2,6 +2,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.expanded {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
 /*helper styles*/
 .bg-yellow {
   background-color: #F9BF3B;
@@ -22,8 +26,8 @@ body {
 }
 
 .bg-lightgrey {
-  /*background-color: #FAFAFA;*/
-  background-color: #6DA79B;
+  background-color: #FBFAE6;
+  /*background-color: #6DA79B;*/
   
 }
 
@@ -67,6 +71,10 @@ background-color: #EDAD44;
   padding: 80px 20px;
 }
 
+.container-full {
+  padding: 0 0;
+}
+
 .navbar-fixed-top {
   /*overflow: hidden;*/
   padding-right: 0;
@@ -77,12 +85,6 @@ background-color: #EDAD44;
   right: 0;
   left: 0;
 }
-
-/*#nav-section h5{
-  color: white;
-  height: 82px;
-  line-height: 82px;
-}*/
 
 .logo {
   background-size: 100% 100%;
@@ -146,6 +148,7 @@ h3 {
 .portfolio {
   text-align: center;
   min-height: 550px;
+  padding: 40px 20px;
 }
 
 #technologies {
@@ -158,7 +161,12 @@ h3 {
 
 .portfolio-item {
   min-height: 400px;
-  width: 400px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  line-height: 350px;
+  margin: 0 auto;
+  color: white;
 }
 
 span {
@@ -169,6 +177,7 @@ span {
 
 #footer {
   color: white;
+  height: 300px;
 }
 
 .button {
@@ -176,7 +185,7 @@ span {
 }
 
 I {
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 5px 10px;
   text-align: center;
 }
