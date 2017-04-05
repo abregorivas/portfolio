@@ -9,58 +9,51 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
 
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js">
-  </script>
-
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
       <!--<i class="zmdi zmdi-laptop zmdi-hc-3x zmdi-hc-border pull-left"></i>-->
-  <div class="container bg-blue">
-    <div class="row">
-      <div class="small-8 column">
-        <h5>Roland Abrego | Web Developer</h5>
-      </div>
-      <div class="small-4 column">
-        <div class="title-bar" data-responsive-toggle="top-menu">
-          <button class="menu-icon" type="button" data-toggle></button>
-          <div class="title-bar-title"></div>
-        </div>
-        <div class="top-bar" id="top-menu">
-          <div class="top-bar-right">
-            <ul class="dropdown vertical medium-horizontal menu">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
+<div id="nav-section" class="container navbar-fixed-top bg-blue">
+  <div class="row logo">
+    <a href="/">
+      <img src="images/logo-test.png" alt="">
+    </a>
+  </div>
+  <div class="row">
+    <div class="title-bar" data-responsive-toggle="top-menu">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title"></div>
+    </div>
+    <div class="top-bar" id="top-menu">
+      <div class="menu-centered">
+        <ul class="dropdown vertical medium-horizontal menu">
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
   </div>
-
-<div class="container-spacer bg-yellow">
-  <div id="about-me" class="row">
-    <div class="small-4 columns">
-      <img class="" src="https://quotefancy.com/media/wallpaper/3840x2160/10261-Leonardo-da-Vinci-Quote-Simplicity-is-the-ultimate-sophistication.jpg"
-        alt="computer" />
+</div>
+</div>
+</div>
+<br>
+<div id="about-me" class="clearfix container-spacer bg-yellow">
+  <div class="row">
+        <h1>Simplicity is the ultimate sophistication.</h1>
+        <cite>Leonardo Davinci</cite>
     </div>
-    <div class="small-8 columns">
+    <!--<div class="small-8 columns">
       <h3>Welcome</h3>
       <p>I am a full stack web developer. My passion is to build simple but beautifully designed sites so as to help individuals
         communicated their messages more effectively. I believe that a minimalist approach to web design is how I express
         my creativity.
       </p>
       <cite>Roland Abregorivas</cite></p>
-    </div>
+    </div>-->
   </div>
 </div>
 
@@ -88,6 +81,7 @@
 </div>
 
 <div class="container">
+  <h1>Sample Work</h1> 
   <div id="portfolio" class="row">
     <div class="medium-6 large-4 column">
       <a href="#" class="thumbnail">
@@ -122,36 +116,49 @@
   </div>
 </div>
 
-
-<!--<div class="row expanded">
-  <div id="potfolio" class="row small-up-1 medium-up-2 large-up-3">
-    <div class="column column-block">
-      <div class="card">
-        <img src="https://www.easilydo.com/static/img/events.png" class="thumbnail portfolio-item" alt="">
-      </div>
+<div class="container bg-grey">
+  <h1>Technologies</h1>
+  <div id="technologies"class="row">
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-html5-plain colored"> HTML5</i>
     </div>
-    <div class="column column-block">
-      <div class="card">
-      <img src="https://s-media-cache-ak0.pinimg.com/736x/4a/05/e0/4a05e0badfd0259c820e713195719dad.jpg" class="thumbnail portfolio-item" alt="">
-      </div>
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-css3-plain colored"> CSS3</i> 
     </div>
-    <div class="column column-block">
-      <img src="https://static1.squarespace.com/static/51c9f430e4b014f2c6e072b9/t/51e601efe4b05ef2d656be5a/1374028274035/2013Sketchbook.jpg"
-        class="thumbnail portfolio-item" alt="">
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-bootstrap-plain colored"> BootStrap</i> 
     </div>
-    <div class="column column-block">
-      <img src="https://www.easilydo.com/static/img/events.png" class="thumbnail portfolio-item" alt="">
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-jquery-plain colored"> jQuery</i> 
     </div>
-    <div class="column column-block">
-      <img src="https://s-media-cache-ak0.pinimg.com/736x/4a/05/e0/4a05e0badfd0259c820e713195719dad.jpg" class="thumbnail portfolio-item" alt="">
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-javascript-plain colored"> JavaScript</i> 
     </div>
-    <div class="column column-block">
-      <img src="https://www.easilydo.com/static/img/events.png" class="thumbnail portfolio-item" alt="">
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-angularjs-plain colored"> AngularJS</i> 
+    </div>
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-mongodb-plain colored"> mongodb</i> 
+    </div>
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-postgresql-plain colored"> postgreSQL</i> 
+    </div>
+    <div class="small-6 medium-4 large-3 column">
+      <i class="devicon-nodejs-plain colored"> nodeJs</i>
+    </div>
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-rails-plain colored"> Rails</i> 
+    </div>
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-ruby-plain colored"> Ruby</i> 
+    </div>
+    <div class="small-6 medium-4 large-3 column"> 
+      <i class="devicon-github-plain colored"> Git/Github</i> 
     </div>
   </div>
-</div>-->
+</div>
 
-<div class="container bg-green">
+<div class="container">
   <div id="contact" class="row">
     <div class="small-12 medium-6 column">
       <form>
@@ -180,6 +187,17 @@
 </div>
 </div>
 
+
+
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js">
+  </script>
 
 <script src="js/profile.js"></script>
 </body>

@@ -12,7 +12,7 @@ body {
 }
 
 .bg-green{
-  background-color: #96281B;
+  background-color: #1E824C;
 }
 
 .bg-grey{
@@ -21,20 +21,41 @@ body {
 
 .container {
     padding: 40px 20px;
-    /*margin: 0 auto;*/
 }
 .container-spacer {
   padding: 80px 20px;
 }
 
-/*navigation*/
-
-.top-bar {
-    background-color: #22313F;
-    color: white;
+.navbar-fixed-top {
+  padding-right: 0;
+  padding-left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  max-height: 336;
+  right: 0;
+  left: 0;
+  max-height: 200px;
 }
 
-.title-bar, .top-bar, .top-bar ul {
+#nav-section h5{
+  color: white;
+  height: 82px;
+  line-height: 82px;
+}
+
+.logo {
+  background-size: 100% 100%;
+    width: 5.3125em;
+    height: 5em;
+    display: block;
+    position: relative;
+}
+/*navigation*/
+#nav-section {
+  color: white;
+}
+.top-bar, .title-bar, .top-bar, .top-bar ul {
   background-color: #22313F;
 }
 
@@ -49,11 +70,17 @@ body {
   text-transform: uppercase;
 }
 
-.top-bar-right ul li a{
+.menu  li a{
 color: white;
+text-transform: uppercase;
 }
 
-
+.menu li {
+  border-right: 1px solid white;
+}
+.menu  li:last-child {
+  border-right: none;
+}
 h3 {
   text-align: center;
 }
@@ -61,16 +88,23 @@ h3 {
 /*about section*/
 
 #about-me {
+  height: 100vh;
+  /*margin-top: 175px;*/
   margin-bottom: 40px;
 }
 #services  {
+  height: 100vh;
   text-align: center;
   color: white;
 }
 #portfolio {
+  height: 100vh;
   text-align: center;
 }
 
+#technologies {
+  text-align: center;
+}
 /*.card {
     line-height: 500px;
     min-height: 500px;
@@ -82,3 +116,19 @@ h3 {
   width: 400px;
 }
 
+span {
+  min-height: 150px;
+  min-width: 50px;
+}
+
+/*@media (max-device-width: 480px)  {
+  .navbar-fixed-top {
+    max-height: 200px;
+  }
+}
+
+@media (max-device-width: 768px)  {
+  .navbar-fixed-top {
+    max-height: 200px;
+  }
+}*/
