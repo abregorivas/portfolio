@@ -12,12 +12,53 @@ body {
 }
 
 .bg-green{
-  background-color: #1E824C;
+  /*background-color: #1E824C;*/
+  /*background-color: #49CC8D;*/
+  background-color: #A23B2A;
 }
 
 .bg-grey{
   background-color: #444444;
 }
+
+.bg-lightgrey {
+  /*background-color: #FAFAFA;*/
+  background-color: #6DA79B;
+  
+}
+
+.bg-mediumgrey {
+  /*background-color: #EBEFF0;*/
+  background-color: #FEC552;
+}
+
+.bg-red-dark {
+background-color: #B02312;
+}
+.bg-red-light {
+background-color: #B63425;
+}
+.bg-orange-dark {
+background-color: #EDAD44;
+}
+
+.bg-orange-light {
+  background-color: #EEB353;
+}
+
+.bg-blue-dark {
+  background-color: #028CA6;
+}
+.bg-blue-light {
+  background-color: #7ECEFD;
+}
+.bg-green-dark {
+  background-color: #A5A931;
+}
+.bg-green-light {
+  background-color: #ACB041;
+}
+
 
 .container {
     padding: 40px 20px;
@@ -27,34 +68,35 @@ body {
 }
 
 .navbar-fixed-top {
+  /*overflow: hidden;*/
   padding-right: 0;
   padding-left: 0;
   position: fixed;
   top: 0;
   z-index: 1;
-  max-height: 336;
   right: 0;
   left: 0;
-  max-height: 200px;
 }
 
-#nav-section h5{
+/*#nav-section h5{
   color: white;
   height: 82px;
   line-height: 82px;
-}
+}*/
 
 .logo {
   background-size: 100% 100%;
-    width: 5.3125em;
-    height: 5em;
-    display: block;
-    position: relative;
+  width: 5.3125em;
+  height: 5em;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
 }
 /*navigation*/
 #nav-section {
   color: white;
 }
+
 .top-bar, .title-bar, .top-bar, .top-bar ul {
   background-color: #22313F;
 }
@@ -78,9 +120,14 @@ text-transform: uppercase;
 .menu li {
   border-right: 1px solid white;
 }
+
 .menu  li:last-child {
   border-right: none;
 }
+.menu  li:hover {
+  text-decoration: underline;
+}
+
 h3 {
   text-align: center;
 }
@@ -88,28 +135,26 @@ h3 {
 /*about section*/
 
 #about-me {
-  height: 100vh;
-  /*margin-top: 175px;*/
-  margin-bottom: 40px;
+  
 }
 #services  {
-  height: 100vh;
   text-align: center;
-  color: white;
+  color: black;
 }
-#portfolio {
-  height: 100vh;
+
+
+.portfolio {
   text-align: center;
+  min-height: 550px;
 }
 
 #technologies {
   text-align: center;
 }
-/*.card {
-    line-height: 500px;
-    min-height: 500px;
-    border: 1px solid red;
-}*/
+
+#contact {
+  color: white;
+}
 
 .portfolio-item {
   min-height: 400px;
@@ -119,6 +164,32 @@ h3 {
 span {
   min-height: 150px;
   min-width: 50px;
+}
+
+
+#footer {
+  color: white;
+}
+
+.button {
+  color: black;
+}
+
+I {
+  font-size: 1em;
+  margin: 5px 10px;
+  text-align: center;
+}
+i  p {
+  text-align: center;
+}
+
+.skill-item {
+  /*height: 200px;*/
+  text-align: center;
+  border: 1px solid black;
+  line-height: 72px;
+  margin: 10px 0;
 }
 
 /*@media (max-device-width: 480px)  {
