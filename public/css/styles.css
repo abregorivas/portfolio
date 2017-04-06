@@ -178,7 +178,8 @@ span {
 
 #footer {
   color: white;
-  height: 300px;
+  /*height: 200px;*/
+  
 }
 
 .button {
@@ -200,6 +201,35 @@ i  p {
   border: 1px solid black;
   line-height: 72px;
   margin: 10px 0;
+}
+
+#icon-list {
+margin-top: 60px;
+margin-bottom: 20px;
+}
+
+
+.skill-icon-list {
+  vertical-align: bottom; 
+  display: table;
+  margin: 0 auto;
+  list-style: none;
+}
+.skill-icon-list li{
+  display: table-cell;
+  padding: 5px 10px;
+}
+
+.copywright {
+  font-size: 1.5em;
+}
+.social-media, .copywright {
+height: 60px;
+line-height: 60px;
+}
+
+.social-media i{
+  float: right;
 }
 
 /*@media (max-device-width: 480px)  {
