@@ -26,24 +26,24 @@ body {
 }
 
 .bg-lightgrey {
-  background-color: #FBFAE6;
+  background-color: #fff;
   /*background-color: #6DA79B;*/
   
 }
 
-.bg-mediumgrey {
-  /*background-color: #EBEFF0;*/
-  background-color: #FEC552;
+.bg-medium-grey {
+  background-color: #EBEFF0;
+  /*background-color: #FEC552;*/
 }
 
 .bg-red-dark {
-background-color: #B02312;
+background-color: #A23B2A;
 }
 .bg-red-light {
 background-color: #B63425;
 }
 .bg-orange-dark {
-background-color: #EDAD44;
+background-color: #D35400;
 }
 
 .bg-orange-light {
@@ -141,7 +141,8 @@ h3 {
 }
 #services  {
   text-align: center;
-  color: black;
+  /*color: black;*/
+  color: white;
 }
 
 
@@ -156,7 +157,8 @@ h3 {
 }
 
 #contact {
-  color: white;
+  /*color: white;*/
+  color: black;
 }
 
 .portfolio-item {
@@ -164,7 +166,6 @@ h3 {
   width: 100%;
   padding: 20px;
   text-align: center;
-  line-height: 350px;
   margin: 0 auto;
   color: white;
 }
