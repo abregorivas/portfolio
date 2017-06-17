@@ -1,6 +1,91 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  height: 200px;
+}
+
+nav img {
+  height: 78px;
+}
+nav ul {
+  list-style: none;
+  padding: 5px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+#about {
+  background-color: #EBEBEB;
+  padding: 2rem 3rem;
+  margin-bottom: -27.5px;
+}
+
+#works {
+  background-color: #333;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: -27.5px;
+  margin-bottom: -27.5px;
+}
+
+#contact {
+  height: 100px;
+  margin: 0 auto;
+  margin-top: -27.5px
+}
+
+footer {
+  background-color: #000;
+  height: 100px;
+}
+
+
+#hexagon {
+  color: white;
+  margin: 0 auto;
+	width: 100px;
+	height: 55px;
+	background: #4A4A4A;
+	position: relative;
+  text-align: center;
+  /*font-size: .95rem;*/
+  line-height: 55px;
+}
+#hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #4A4A4A;
+}
+#hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #4A4A4A;
+}
+	
+
+
 
 .greeting:before {
   content: "Welcome! Guest"
@@ -40,13 +125,13 @@ body {
 }
 
 .bg-red-dark {
-background-color: #A23B2A;
+  background-color: #A23B2A;
 }
 .bg-red-light {
-background-color: #B63425;
+  background-color: #B63425;
 }
 .bg-orange-dark {
-background-color: #D35400;
+  background-color: #D35400;
 }
 
 .bg-orange-light {
