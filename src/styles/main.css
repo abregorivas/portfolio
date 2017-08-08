@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -21,6 +21,7 @@ time, mark, audio, video {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: red;
 }
 
 
@@ -145,8 +146,8 @@ body {
     box-sizing: content-box;
     height: 100vh;
     }
-  .service-item { 
-    flex: 1; 
+  .service-item {
+    flex: 1;
     min-width: 300px;
     padding: 1rem 2rem;
     /*display: flex;*/
@@ -160,7 +161,7 @@ body {
     }
 
     .service-item p {
-      
+
       line-height: 1.5rem;
     }
 /*<-----------END----------->*/
@@ -175,7 +176,7 @@ body {
 
   .portfolio-item {
     /*flex: 1 1 20%;*/
-    
+
     /*flex: 1;*/
     /*max-width: 50%;*/
     /*max-width: 300px;*/
@@ -211,7 +212,7 @@ body {
     justify-content: space-between;
     margin: 0 auto;
     align-items: center;
-    
+
     }
 
   form input {
@@ -253,7 +254,7 @@ body {
   height: 6px;
   border-radius: 50%;
   /*border: 1px solid #333;*/
-  background-color: #777;  
+  background-color: #777;
   margin: 0 auto;
   margin-top: -8px;
 }
@@ -309,7 +310,7 @@ body {
 #footer {
   /*color: white;*/
   /*height: 200px;*/
-  
+
 }
 
 .button {
@@ -340,7 +341,7 @@ margin-bottom: 20px;*/
 
 
 .skill-icon-list {
-  /*vertical-align: bottom; 
+  /*vertical-align: bottom;
   display: table;
   margin: 0 auto;
   list-style: none;*/

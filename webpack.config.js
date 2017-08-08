@@ -32,11 +32,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/,
-        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        }))
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
         test: /\.(png|svg|jpe?g|gif|svg|ttf|woff|woff2)$/,
@@ -63,7 +60,8 @@ module.exports = {
     new CleanWebpackPlugin(['dist/*.*'], {
       root: __dirname,
       verbose: true,
-      dry: false
+      dry: false,
+      exclude: ['index.html']
     }),
     new ExtractTextPlugin({ filename: '[name].css', disable: false, allChunks: true }),
     new PurifyCSSPlugin({
