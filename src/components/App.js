@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import '../styles/main.css'
+import '../styles/main.scss'
+
+// === COMPONENTS ===
 import Home from './Home'
 
 const App = () => (

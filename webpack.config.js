@@ -32,8 +32,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        test: /\.s[ac]ss$/,
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        }))
       },
       {
         test: /\.(png|svg|jpe?g|gif|svg|ttf|woff|woff2)$/,
