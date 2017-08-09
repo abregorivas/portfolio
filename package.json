@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/abregorivas/portfolio#readme",
   "dependencies": {
+    "foundation-sites": "^6.4.1",
+    "jquery": "^3.2.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0"
   },
-   "devDependencies": {
+  "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -62,11 +64,11 @@
     "react-hot-loader": "^3.0.0-beta.7",
     "react-router-dom": "^4.1.2",
     "sass-loader": "^6.0.6",
+    "script-loader": "^0.7.0",
     "standard": "^10.0.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
     "webpack-dev-middleware": "^1.11.0",
     "webpack-dev-server": "^2.6.1"
   }
-
 }

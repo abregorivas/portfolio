@@ -14,11 +14,16 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
+    'script-loader!jquery/dist/jquery.min.js',
+    'script-loader!foundation-sites/dist/js/foundation.min.js',
     './src/index.js'
   ],
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].[hash].js'
+  },
+  externals: {
+    jquery: 'jQuery'
   },
   context: __dirname,
   devtool:
@@ -33,10 +38,18 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/,
-        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        }))
+        use: [ {
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader'
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            includePaths: [
+              path.resolve(__dirname, './node_modules/foundation-sites/scss')]
+          }
+        }]
       },
       {
         test: /\.(png|svg|jpe?g|gif|svg|ttf|woff|woff2)$/,
@@ -51,12 +64,16 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|bower_components)/,
         use: ['babel-loader']
       }
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
@@ -88,5 +105,13 @@ module.exports = {
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(inProduction)
     })
-  ]
+  ],
+  resolve: {
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    alias: {
+      src: 'src',
+      applicationStyles: 'src/styles/main.scss'
+    },
+    extensions: ['.js', '.jsx']
+  }
 }
