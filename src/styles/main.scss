@@ -6,7 +6,5 @@
 @include foundation-everything;
 
 //components
-body {
-  background-color: $dark-gray;
-  color: white;
-}
+@import "components/navbar";
+@import "components/lead";
