@@ -4,8 +4,10 @@ class Lead extends Component {
   render () {
     return (
       <div className='row expanded lead-container'>
-        <h1>Welcome!</h1>
-        <p>I am a fullstack web developer who is recovering from being an accountant.</p>
+        <div className='column'>
+          <h2>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</h2>
+          <cite> Antoine de Saint-Exup&#233;ry (Terre des Hommes, 1939)</cite>
+        </div>
       </div>
     )
   }

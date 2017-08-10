@@ -3,7 +3,7 @@ import Navbar from './Nav'
 import Lead from './Lead'
 import Services from './Services'
 import Gallery from './Gallery'
-
+import About from './About'
 class Home extends Component {
   render () {
     return (
@@ -11,6 +11,7 @@ class Home extends Component {
         <Navbar />
         <Lead />
         <Services />
+        <About />
         <Gallery />
       </div>
     )
