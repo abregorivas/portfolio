@@ -7,7 +7,7 @@ import Home from './Home'
 
 const App = () => (
   <BrowserRouter>
-    <div className='container'>
+    <div>
       <Route exact path='/' component={Home} />
     </div>
   </BrowserRouter>

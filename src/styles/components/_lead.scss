@@ -1,8 +1,9 @@
+@import "../base/variables";
 
-.container {
+.lead-container {
   height: 400px;
-  width: 100%;
-  background-color: $LYNCH;
+  padding: 2rem 8rem;
+  background-color: $ALICE_BLUE;
    > p {
     font-size: 2rem;
   }

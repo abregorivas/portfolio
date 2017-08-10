@@ -4,7 +4,13 @@
 @import "base/foundation-settings";
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
 
 //components
 @import "components/navbar";
 @import "components/lead";
+
+Gallery > .row {
+  max-width: 100%;
+}
