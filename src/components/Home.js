@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from './Nav'
 import Lead from './Lead'
-import Card from './Card'
+import Services from './Services'
 import Gallery from './Gallery'
 
 class Home extends Component {
@@ -10,7 +10,7 @@ class Home extends Component {
       <div>
         <Navbar />
         <Lead />
-        <Card />
+        <Services />
         <Gallery />
       </div>
     )
