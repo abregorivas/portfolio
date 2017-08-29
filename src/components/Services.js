@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import Card from './Card'
+import launch from '../images/launch128.png'
+import design from '../images/design128.png'
+import develop from '../images/develop128.png'
 
 class Services extends Component {
   render () {
@@ -11,9 +14,9 @@ class Services extends Component {
 
     return (
       <div className='row small-up-2 medium-up-3'>
-        <Card title='Design' imgSrc='src/images/design128.png' imgAlt='Design Logo' message={message.design} />
-        <Card title='Develop' imgSrc='src/images/develop128.png' imgAlt='Design Logo' message={message.development} />
-        <Card title='Launch' imgSrc='src/images/launch128.png' imgAlt='Design Logo' message={message.launch} />
+        <Card title='Design' imgSrc={design} imgAlt='Design Logo' message={message.design} />
+        <Card title='Develop' imgSrc={develop} imgAlt='Design Logo' message={message.development} />
+        <Card title='Launch' imgSrc={launch} imgAlt='Design Logo' message={message.launch} />
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {NavLink} from 'react-router-dom'
 
 class Navbar extends Component {
   render () {
@@ -9,8 +10,8 @@ class Navbar extends Component {
         </div>
         <div className='top-bar-right'>
           <ul className='menu align-center'>
-            <li><a>Home</a></li>
-            <li><a>Apps</a></li>
+            <li><NavLink to='./'>Home</NavLink></li>
+            <li><NavLink to='./Games'>Apps</NavLink></li>
             <li><a>About</a></li>
             <li><a>Contact</a></li>
           </ul>

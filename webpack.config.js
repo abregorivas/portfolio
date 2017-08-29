@@ -54,12 +54,13 @@ module.exports = {
       {
         test: /\.(png|svg|jpe?g|gif|svg|ttf|woff|woff2)$/,
         loaders: [{
-          loader: 'file-loader',
+          loader: 'url-loader',
           options: {
-            name: 'images/[name].[ext]'
+            name: 'images/[name].[ext]',
+            limit: 40000
           }
         },
-          'img-loader'
+          'image-webpack-loader'
         ]
       },
       {
