@@ -1,0 +1,16 @@
+@import "../base/variables";
+
+.lead-container {
+  height: 400px;
+  padding: 4rem 16rem 2rem 16rem;
+  background-color: $ALICE_BLUE;
+    h2 {
+    font-size: 3rem;
+  }
+   cite {
+     font-size: 2rem;
+   }
+
+}
+
+
