@@ -1,12 +1,2 @@
-@import "base/variables";
-@import "base/global";
-//foundation
-@import "base/foundation-settings";
-@import "~foundation-sites/scss/foundation";
-@include foundation-everything;
-@include foundation-flex-grid;
-@include foundation-flex-classes;
-@import "base/foundation-overides";
-//components
-@import "components/navbar";
-@import "components/lead";
+@import 'base/variables';
+@import 'base/global';

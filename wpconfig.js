@@ -1,13 +1,14 @@
-const webpack = require('webpack')
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const glob = require('glob')
-const PurifyCSSPlugin = require('purifycss-webpack')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const inProduction = false
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const inProduction = false;
 
 module.exports = {
   entry: [
@@ -38,28 +39,31 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/,
-        use: [ {
-          loader: 'style-loader'
-        }, {
-          loader: 'css-loader'
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            includePaths: [
-              path.resolve(__dirname, './node_modules/foundation-sites/scss')]
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [path.resolve(__dirname, './node_modules/foundation-sites/scss')]
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.(png|svg|jpe?g|gif|svg|ttf|woff|woff2)$/,
-        loaders: [{
-          loader: 'url-loader',
-          options: {
-            name: 'images/[name].[ext]',
-            limit: 40000
-          }
-        },
+        loaders: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: 'images/[name].[ext]',
+              limit: 40000
+            }
+          },
           'image-webpack-loader'
         ]
       },
@@ -72,8 +76,8 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery'
+      $: 'jquery',
+      jQuery: 'jquery'
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
@@ -92,9 +96,7 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       options: {
         minimize: inProduction,
-        postcss: [
-          autoprefixer()
-        ]
+        postcss: [autoprefixer()]
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -115,4 +117,4 @@ module.exports = {
     },
     extensions: ['.js', '.jsx']
   }
-}
+};
