@@ -1,120 +1,102 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const glob = require('glob');
-const PurifyCSSPlugin = require('purifycss-webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+// plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const inProduction = false;
+module.exports = (env = {}) => {
+  const inProduction = env.production === true;
+  const platform = env.platform;
 
-module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    'script-loader!jquery/dist/jquery.min.js',
-    'script-loader!foundation-sites/dist/js/foundation.min.js',
-    './src/index.js'
-  ],
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].[hash].js'
-  },
-  externals: {
-    jquery: 'jQuery'
-  },
-  context: __dirname,
-  devtool:
-    process.env.NODE_ENV === 'production'
-      ? 'cheap-module-source-map'
-      : 'cheap-module-eval-source-map',
-  devServer: {
-    historyApiFallback: true,
-    hot: true
-  },
-  module: {
-    rules: [
-      {
-        test: /\.s[ac]ss$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [path.resolve(__dirname, './node_modules/foundation-sites/scss')]
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(png|svg|jpe?g|gif|svg|ttf|woff|woff2)$/,
-        loaders: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: 'images/[name].[ext]',
-              limit: 40000
-            }
-          },
-          'image-webpack-loader'
-        ]
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        use: ['babel-loader']
-      }
-    ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    }),
-    new CleanWebpackPlugin(['dist/*.*'], {
-      root: __dirname,
-      verbose: true,
-      dry: false,
-      exclude: ['index.html']
-    }),
-    new ExtractTextPlugin({ filename: '[name].css', disable: false, allChunks: true }),
-    new PurifyCSSPlugin({
-      paths: glob.sync(path.join(__dirname, 'src/*.html')),
-      minimize: inProduction
-    }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        minimize: inProduction,
-        postcss: [autoprefixer()]
-      }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      PRODUCTION: JSON.stringify(inProduction)
-    })
-  ],
-  resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    alias: {
-      src: 'src',
-      applicationStyles: 'src/styles/main.scss'
+  return {
+    entry: [
+      'react-hot-loader/patch',
+      'webpack-dev-server/client?http://localhost:9000', // <- enables websockect connection
+      'webpack/hot/only-dev-server', // <-hmr in browser
+      './index.js'
+    ],
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].[hash].js',
+      publicPath: '/'
     },
-    extensions: ['.js', '.jsx']
-  }
+    context: path.resolve(__dirname, 'src'),
+    devtool: inProduction ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),
+      publicPath: '/',
+      historyApiFallback: true,
+      compress: true,
+      port: 9000,
+      open: true,
+      hot: true,
+      inline: true
+    },
+    module: {
+      rules: [
+        {
+          enforce: 'pre',
+          test: /\.jsx?$/,
+          use: 'eslint-loader',
+          exclude: /(node_modules|bower_components)/
+        },
+        {
+          test: /\.jsx?$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader'
+          }
+        },
+        {
+          test: /\.s[ac]ss$/,
+          use: ['css-hot-loader'].concat(
+            ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: [
+                { loader: 'css-loader', options: { importLoaders: 2 } },
+                { loader: 'postcss-loader', options: { sourceMap: true } },
+                { loader: 'sass-loader', options: { sourceMap: true } }
+              ],
+              publicPath: '/dist'
+            })
+          )
+        },
+        {
+          test: /\.(png|svg|jpe?g|gif|svg|ttf|woff|woff2)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'images/[name].[hash].[ext]',
+                outputPath: 'images/',
+                publicPath: '/'
+              }
+            },
+            { loader: 'image-webpack-loader' }
+          ]
+        }
+      ]
+    },
+    resolve: {
+      alias: { components: path.resolve(__dirname, 'src/components') },
+      extensions: ['.js', '.jsx']
+    },
+    plugins: [
+      new CleanWebpackPlugin(['dist/*.*'], { root: __dirname, verbose: true, dry: false }),
+      new ExtractTextPlugin({
+        filename: inProduction ? '[name],[hash].css' : '[name].css',
+        disable: false,
+        allChunks: true
+      }),
+      new HtmlWebpackPlugin({ template: 'index.html' }),
+      new webpack.HotModuleReplacementPlugin(), // <-generates update chucks hmt
+      new webpack.NamedModulesPlugin(),
+      new webpack.DefinePlugin({
+        PRODUCTION: JSON.stringify(inProduction),
+        PLATFORM: JSON.stringify(platform)
+      })
+    ]
+  };
 };
