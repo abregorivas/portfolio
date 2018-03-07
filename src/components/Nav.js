@@ -1,27 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import '../styles/components/_navbar.scss';
+import logo from '../images/logo-sm.png';
 
 const Navbar = () => (
-  <div className="top-bar">
-    <div className="top-bar-left">
-      <img src="src/images/logo-test1.png" alt="site-logo" />
-    </div>
-    <div className="top-bar-right">
-      <ul className="menu align-center">
-        <li>
-          <NavLink to="./">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="./Games">Apps</NavLink>
-        </li>
-        <li>
-          <a>About</a>
-        </li>
-        <li>
-          <a>Contact</a>
-        </li>
-      </ul>
-    </div>
+  <div className="main-container">
+    <span className="logo">
+      <img src={logo} alt="logo" />
+    </span>
+    <ul>
+      <li>About</li>
+      <li>Works</li>
+      <li>Contact</li>
+    </ul>
   </div>
 );
 

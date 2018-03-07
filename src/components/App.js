@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import '../styles/main.scss';
-import Games from './Games';
-// === COMPONENTS ===
+
+import Nav from './Nav';
 import Home from './Home';
 
 const App = () => (
-  <BrowserRouter>
-    <div>
+  <div>
+    <Nav />
+    <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/games" component={Games} />
-    </div>
-  </BrowserRouter>
+    </Switch>
+  </div>
 );
 
 export default hot(module)(App);

@@ -2,8 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
-const PurifyCSSPlugin = require('purifycss-webpack');
-const glob = require('glob');
+// const PurifyCSSPlugin = require('purifycss-webpack');
+// const glob = require('glob');
 
 module.exports = merge(common, {
   entry: [

@@ -1,18 +1,22 @@
-.top-bar {
-  padding: 2rem 5rem;
-  background-color: white;
-  & ul {
-    background-color: white;
-  }
-  li {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-  }
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  border-bottom: 1px solid black;
+  align-items: center;
 }
-.menu a:hover {
-  text-decoration: none;
-  border-bottom-style: solid;
-  border-bottom-color: $RIPE_LEMON;
-  border-bottom-width: 8px;
-  background-color: $WHITE_SMOKE;
+
+.logo {
+  padding: 0 1rem;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 70%;
+}
+
+ul > li {
+  list-style: none;
+  width: 100px;
 }
