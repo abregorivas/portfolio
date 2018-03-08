@@ -1,9 +1,19 @@
+@import '../base/_colors.scss';
+
 .mainContainer {
   //   background-image: url('../../images/lightbulb1.jpg');
+  // background-image: url('../../images/coffee-smartphone-desk-pen2.jpg');
   background-image: url('../../images/laptop.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  // background: linear-gradient(#f2c94c, #f2994a);
   max-width: 100%;
-  min-height: 600px;
+  min-height: 650px;
+}
+
+.overlay {
+  width: 100vw;
+  min-height: 650px;
+  background-color: rgba(247, 108, 28, 0.459);
 }

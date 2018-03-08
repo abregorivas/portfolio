@@ -1,22 +1,35 @@
+@import '../base/_colors.scss';
+
 .main_container {
   height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  background-color: $DarkGrey;
 }
 
 span:first-of-type {
   flex: 1 1 30%;
+  color: $LightGrey;
 }
 
 span:nth-of-type(2) {
-  flex: 1 1 60%;
+  flex: 1 1 40%;
   text-align: center;
+  color: $Orange;
+  cursor: pointer;
 }
 
-ul {
-  flex: 1 1 10%;
+.social_media {
+  flex: 1 1 30%;
   display: flex;
-  width: 180px;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.social_media > li {
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
 }

@@ -8,7 +8,7 @@ const Navbar = () => (
     <span className={styles.logo}>
       <img src={logo} alt="logo" />
     </span>
-    <ul>
+    <ul className={styles.menu}>
       <li>About</li>
       <li>Works</li>
       <li>Contact</li>

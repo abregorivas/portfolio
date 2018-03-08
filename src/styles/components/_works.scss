@@ -1,0 +1,43 @@
+@import '../base/_colors.scss';
+
+.main_container {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  flex: 1 1 calc(100% / 3);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  //   height: 100%;
+  height: 300px;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.card:first-of-type {
+  background-color: $Orange;
+}
+
+.card:nth-of-type(2) {
+  background-color: lighten($LightGrey);
+}
+
+.card:nth-of-type(3) {
+  background-color: $Yellow;
+}
