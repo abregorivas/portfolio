@@ -5,6 +5,7 @@ import '../styles/main.scss';
 
 import Nav from './Nav';
 import Home from './Home';
+import Footer from './Footer';
 
 const App = () => (
   <div>
@@ -12,6 +13,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Home} />
     </Switch>
+    <Footer />
   </div>
 );
 

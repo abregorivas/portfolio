@@ -1,11 +1,11 @@
 import React from 'react';
 // import { NavLink } from 'react-router-dom';
-import '../styles/components/_navbar.scss';
+import styles from '../styles/components/_navbar.scss';
 import logo from '../images/logo-sm.png';
 
 const Navbar = () => (
-  <div className="main-container">
-    <span className="logo">
+  <div className={styles.mainContainer}>
+    <span className={styles.logo}>
       <img src={logo} alt="logo" />
     </span>
     <ul>

@@ -1,11 +1,8 @@
 import React from 'react';
-// import Navbar from './Nav';
-// import Lead from './Lead';
-// import Services from './Services';
-// import Gallery from './Gallery';
-// import About from './About';
-// import Footer from './Footer';
+// import desk from '../images/laptop.png';
+// import lightbulb from '../images/lightbulb1.jpg';
+import styles from '../styles/components/_home.scss';
 
-const Home = () => <div>Hello!</div>;
+const Home = () => <div className={styles.mainContainer}>Welcome</div>;
 
 export default Home;
